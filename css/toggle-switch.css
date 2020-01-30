@@ -1,0 +1,56 @@
+.toggle-switch::before {
+	color: hsl(233, 13%, 49%);
+	font-size: 0.8em;
+	font-weight: 200;
+	content: "Annually";
+	position: relative;
+	bottom: 12px;
+	right: 15px;
+}
+
+.toggle-switch::after {
+	color: hsl(233, 13%, 49%);
+	font-size: 0.8em;
+	font-weight: 200;
+	content: "Monthly";
+	position: relative;
+	bottom: 12px;
+	left: 15px;
+}
+
+input {
+	width:0;
+	height:0;
+	visibility: hidden;
+}
+
+label {
+	position: relative;
+	width: 64px;
+	height: 34px;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 100px;
+	background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	text-indent: -9999px;
+}
+
+label::before {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 100px;
+	transition: .4s;
+}
+
+input:checked + label {
+	background-image: linear-gradient(to left, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+input:checked + label::before {
+	transform: translateX(30px);
+}

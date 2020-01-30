@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+:root {
+    /* PRIMARY COLOR */
+    /* - Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%) */
+
+    /* NEUTRAL COLORS */
+    --bg-color: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --font-color: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    color: var(--font-color);
+    font-size: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+    background: url(/images/bg-top.svg),
+                url(/images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top right,
+                          bottom left;
+    background-size: 20%;
+    background-color: var(--bg-color);
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+span {
+    color: var(--Light-Grayish-Blue);
+}

@@ -1,0 +1,112 @@
+main {
+    /* max-width: 1200px; */
+  /* margin: auto; */
+    margin: 50px 250px;
+    display: grid;
+    grid-template-areas: 
+        "price price price"
+        "basic professional master";
+    row-gap: 50px;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+main > div {
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+/* header */
+.price-toggle {
+    grid-area: price;
+    /* background-color: aqua; */
+}
+
+.price-toggle input {
+    margin: 0;
+}
+
+/* PLANS */
+
+.basic {
+    grid-area: basic;
+    justify-self: right;
+    background-color: #fff;
+}
+
+.professional {
+    grid-area: professional;
+    color: #fff;
+    background-image: linear-gradient( hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    height: 380px;
+    z-index: 1;
+    padding-top: 18px !important;
+}
+
+.master {
+    grid-area: master;
+    justify-self: left;
+    background-color: #fff;
+}
+
+.plans {
+    /* box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10); */
+    box-shadow: 0 0 5px 5px rgba(243, 243, 243, 0.1);
+    width: 100%;
+    padding: 0 30px;
+    border-radius: 7px;
+}
+
+.price {
+    font-size: 60px;
+    margin: 0;
+}
+
+.price::before {
+    position: relative;
+    content: "$";
+    font-size: 2rem;
+    bottom: 10px;
+}
+
+ul li {
+    border-top: 1px solid rgba(220, 220, 220, 0.4);
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.bottom-border {
+    border-bottom: 1px solid rgba(220, 220, 220, 0.4);
+}
+
+/* BUTTON */
+
+button {
+    border: 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.2s ease 0s;
+}
+
+.blue-button {
+    background-color: #fff;
+    color: hsl(237, 63%, 64%);
+}
+
+.white-button {
+    color: #fff;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.white-button:hover, .blue-button:hover {
+    letter-spacing: 2px;
+  }
